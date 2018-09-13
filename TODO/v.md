@@ -1,0 +1,13 @@
+>v-bind:
+绑定属性和实例中的msg保持一致
+>v-for:
+绑定数组的数据来渲染一个列表，参数有index，item
+>v-on:
+添加一个事件监听器，通过它来调用在Vue实例中定义的方法
+>v-model:
+实现表单输入和应用状态之间的双向绑定
+**在vue中去querystring,使用
+```javascript
+created(){
+    console.log(this.$route.query)
+}

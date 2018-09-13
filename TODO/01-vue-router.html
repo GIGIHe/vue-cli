@@ -1,0 +1,125 @@
+<!-- <div id="app"> -->
+    <!-- <home></home> -->
+    <!-- 输出 -->
+    <!-- <router-view></router-view> -->
+<!-- </div>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script> -->
+<!-- // 声明一个组件 -->
+<!-- const homePage={
+    template:`
+    <div>
+    <h3>这是home</h3>
+    <ul>
+    <li><router-link to='/'>
+    home
+    </router-link>
+    </li>
+    <li><router-link to='/about'>
+    about
+    </router-link>
+</li>
+    </ul>
+    </div>
+    `
+}
+const aboutPage={
+    template:`
+    <div>
+    <h3>这是about</h3>
+    <ul>
+    <li><router-link to='/'>
+    home
+    </router-link>
+    </li>
+    <li><router-link to='/about'>
+    about
+    </router-link>
+</li>
+    </ul>
+    </div>
+    `
+}
+// 实例
+const router = new VueRouter({
+    routes:[
+        {
+            path:'/',
+            component:homePage
+        },
+        {
+            path:'/about',
+            component:aboutPage
+        }
+
+    ]
+    
+})
+// Vue.component('home',homePage)
+
+    const vm = new Vue({
+        el:'#app',
+        // 挂载
+        router
+    })
+</script> -->
+<div id="ap">
+    <router-view></router-view>
+</div>
+<script src="./vue.js"></script>
+<script src="./vue-router.js"></script>
+<script>
+    const homePage={
+        template:`
+        <div>
+        home
+        <ul>
+         <li>
+         <router-link to='/'>
+         home
+         </router-link>
+        </li>
+        <li>
+         <router-link to='/about'>
+         about
+         </router-link>
+        </li>
+        </ul>
+        </div>   `
+    }
+    const aboutPage={
+        template:`
+        <div>
+        about
+        <ul>
+         <li>
+         <router-link to='/'>
+         home
+         </router-link>
+        </li>
+        <li>
+         <router-link to='/about'>
+         about
+         </router-link>
+        </li>
+        </ul>
+        </div>   `
+    }
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/',
+                component:homePage
+            },
+            {
+                path:'/about',
+                component:aboutPage
+            }
+        ]
+    })
+    const vm = new Vue({
+        el:'#ap',
+        router
+    })
+</script>

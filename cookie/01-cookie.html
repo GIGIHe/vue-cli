@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+</body>
+<script>
+    //     let date = new Date();
+    //     date.setMinutes(21);
+    //     let dateStr = date.toUTCString()
+    //     console.log(dateStr);
+    //     // let cookie = document.coookie
+    // document.cookie = 'name=yaoming',
+    // document.cookie = 'sex=male; expires=' + dateStr
+    //     console.log(document.cookie)
+    function setCookie() {
+        document.cookie = 'name1=zhaoliying'
+        document.cookie = 'name2=huozun'
+        document.cookie = 'name3=yangmi'
+    }
+    setCookie()
+
+    function getCookie() {
+        let obj = {}
+        let cookieString = document.cookie;
+        console.log(cookieString)
+        let arr = cookieString.split(';')
+        // console.log(arr)
+        arr.forEach(item => {
+            let arr1 = item.split('=');
+            console.log(arr1)
+            let key = arr1[0].trim()
+            console.log(key)
+            let value = arr1[1]
+            obj[key] = value
+        })
+        return obj
+    }
+    let object = getCookie();
+    console.log(object)
+</script>
+
+</html>
